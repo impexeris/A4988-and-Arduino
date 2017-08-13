@@ -34,7 +34,7 @@ int tick_count;
 
 int button;
 boolean debounce;
-int previous_time;
+unsigned long  previous_time; //has to be unsigned long type to match the type mills() function returns
 
 // custom LCD square symbol for progress bar
 byte square_symbol[8] = {
