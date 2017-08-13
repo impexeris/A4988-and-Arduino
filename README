@@ -1,7 +1,18 @@
-// cntrSpeedDirDRV8825TimerPWM by impexeris
-// This file was frorked from cntrSpeedDir.ino, which was originally created by lucadentella 
-// It is adjusted for the DRV8825 motor driver chip. In fact for the Pololu DRV8825 board (adjustmets are simple - just added control for M0, M1 and M2.
-// This file would get backwards compatible with A4988  by commenting out lines 42,43,44,77,78,79,83,84,85, -
-// pins of the DRV8825 driver which alow to define microstepping mode on that particular board. In this particular case (1/32 microstepping for most smooth operation)
-// another cardinal change is use of the Timer1 PWM output on Arduino pin9 instead of interrupt driven pulsing. Rationale for this decission is that for the
-// simple constant driving of the motor PWM signal can be used from the Timer1, which is completely unblocking the micro-controller.
+cntrSpeedDirDRV8825TimerPWM by impexeris
+This file was frorked from cntrSpeedDir.ino, which was originally created by lucadentella 
+It is adjusted for the DRV8825 motor driver chip. In fact for the Pololu DRV8825 board (adjustmets are simple - just added control for M0, M1 and M2.
+This file would get backwards compatible with A4988  by commenting out lines 42,43,44,77,78,79,83,84,85, -
+pins of the DRV8825 driver which alow to define microstepping mode on that particular board. In this particular case (1/32 microstepping for most smooth operation)
+another cardinal change is use of the Timer1 PWM output on Arduino pin9 instead of interrupt driven pulsing. Rationale for this decission is that for the
+simple constant driving of the motor PWM signal can be used from the Timer1, which is completely unblocking the micro-controller.
+
+Other files are just the original files from the original creator lucadentella:
+
+Using Allegro A4988 stepper controller with Arduino
+
+http://www.lucadentella.it/category/a4988-arduino/
+
+Arduino sketches:
+
+- singleSteps.ino = control step by step
+- cntrSpeedDir.ino = control speed and direction with continuous rotation
